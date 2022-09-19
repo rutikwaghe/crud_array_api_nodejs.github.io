@@ -6,10 +6,11 @@ import {
   deleteUser,
   updateUser,
 } from "../controllers/users.js";
+import conn from "../connection.js";
 
 const router = express.Router();
 
-router.get("/getUser/:id", getUser);
+router.post("/getUser", getUser);
 router.get("/getAllUsers", getAllUsers);
 router.post("/createUser", createUser);
 router.delete("/deleteUser/:id", deleteUser);
